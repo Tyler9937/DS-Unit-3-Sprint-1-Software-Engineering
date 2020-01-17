@@ -1,15 +1,15 @@
 # Importing the random library for use in the Product class
 import random
 
+
 class Product():
     '''
     This class is created for the purpose of product organization at the
     Acme Corporation.
     '''
 
-
     def __init__(self, name, price=10, weight=20, flammability=0.5,
-                 identifier=random.randint(1000000,9999999)):
+                 identifier=random.randint(1000000, 9999999)):
         '''
         Constructor method that initiats self along with defining
         class variables takes in the following parameters: name,
@@ -21,7 +21,6 @@ class Product():
         self.flammability = flammability
         self.identifier = identifier
 
-
     def stealability(self):
         '''
         this methode calculates the price divided by its weight to
@@ -31,12 +30,17 @@ class Product():
         steal_factor = self.price/self.weight
 
         if steal_factor < 0.5:
-            print('Not so stealable')
+            a = 'Not so stealable'
+            print(a)
+            return a
         elif steal_factor < 1:
-            print('Kinda stealable')
+            b = 'Kinda stealable'
+            print(b)
+            return b
         else:
-            print('Very stealable!')
-
+            c = 'Very stealable!'
+            print(c)
+            return c
 
     def explode(self):
         '''
@@ -47,11 +51,17 @@ class Product():
         flame_factor = self.flammability*self.weight
 
         if flame_factor < 10:
-            print('...fizzle.')
+            a = '...fizzle.'
+            print(a)
+            return a
         elif flame_factor < 50:
-            print('...boom!')
+            b = '...boom!'
+            print(b)
+            return b
         else:
-            print('...BABOOM!!')
+            c = '...BABOOM!!'
+            print(c)
+            return c
 
 
 class BoxingGlove(Product):
@@ -59,21 +69,18 @@ class BoxingGlove(Product):
     This is a sub class of the product class
     '''
     def __init__(self, name, price=10, weight=10, flammability=0.5,
-                 identifier=random.randint(1000000,9999999)):
+                 identifier=random.randint(1000000, 9999999)):
         '''
         constructor methode
         '''
         Product.__init__(self, name, price=10, weight=10, flammability=0.5,
-                     identifier=random.randint(1000000,9999999))
-
-
+                         identifier=random.randint(1000000, 9999999))
 
     def explode(self):
         '''
         specife method for exploding gloves
         '''
         print("...it's a glove.")
-
 
     def punch(self):
         '''

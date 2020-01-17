@@ -17,17 +17,14 @@ class AcmeProductTests(unittest.TestCase):
         self.assertEqual(prod.price, 10)
         self.assertEqual(prod.weight, 20)
 
-
-
     def test_apples(self):
         '''
         tests apples product
         '''
         prod2 = Product('apples', price=60, weight=30, flammability=.04)
-        prod2.stealability()
-        # currenly not working
-        self.assertEqual(prod2.stealability(), 'placeholder')
-        self.assertEqual(prod2.explode(), 1.2)
+
+        self.assertEqual(prod2.stealability(), 'Very stealable!')
+        self.assertEqual(prod2.explode(), '...fizzle.')
 
 
 class AcmeReportTests(unittest.TestCase):
@@ -43,10 +40,14 @@ class AcmeReportTests(unittest.TestCase):
 
     def test_legal_names(self):
         '''
-        test for legal name
+        test for legal name, splits to check for space
+        then calls each string in list to see if it contains a
+        adjective or noun
         '''
-        #currently not working
-        self.assertEqual(generate_products[0], 'placeholder')
+        test = generate_products()
+        test = test[0].name.split(' ')
+        self.assertIn(test[0], adjectives+nouns)
+        self.assertIn(test[1], adjectives+nouns)
 
 if __name__ == '__main__':
     unittest.main()

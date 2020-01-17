@@ -14,15 +14,18 @@ def generate_products(num_products=30):
     '''
     products = []
     for i in range(0, num_products):
-        name = adjectives[random.randint(0, len(adjectives)-1)] + ' ' + nouns[random.randint(0, len(nouns)-1)]
+        name = adjectives[random.randint(0, len(adjectives)-1)]\
+            + ' ' + nouns[random.randint(0, len(nouns)-1)]
         price = random.randint(5, 100)
         weight = random.randint(5, 100)
         flammability = random.uniform(0.0, 2.5)
-        products.append(Product(name=name, price=price, weight=weight, flammability=flammability))
+        products.append(Product(name=name, price=price,
+                        weight=weight, flammability=flammability))
 
     return products
 
 generate_products()
+
 
 def inventory_report(products):
     '''
@@ -40,7 +43,6 @@ def inventory_report(products):
         average_price = sum(price_list) / len(price_list)
         average_weight = sum(weight_list) / len(weight_list)
         average_flame = sum(flame_list) / len(flame_list)
-
 
     print('ACME CORPORATION OFFICIAL INVENTORY REPORT')
     print('Unique product names: ' + str(len(products)))

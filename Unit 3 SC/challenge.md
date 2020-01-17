@@ -266,6 +266,17 @@ career here, you'll have to answer the following:
   slightly different things running on all of them. How could containers help us
   improve this situation?
 
+##Part 7 Answers
+	The most important part of code reviews is to make sure that all the 
+	code is orgainized and functional. It is also important that during code reviews
+	that any major bugs in the code are found. When people review my code I appricate
+	being informed of styling errors and functinality problems.
+
+	Containers can help with th computer problem of slightly diffrent things running on 
+	all of them. Containers do this by being an isolated enviorment from the main computre
+	that as its own packages and operating system. By utiizing containers code becasue
+	much easier to share amongs diffrent devices.
+
 Answer both of these questions (baseline ~5 sentences) here in text.
 
 ### Part 8 - Turn it in!
